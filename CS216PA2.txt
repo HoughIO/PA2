@@ -1,9 +1,11 @@
------------------------------------------------------------
-Welcome to my text editor.
-To insert text at the end of the file, type a line and press enter.
-To insert text at a certain line number, type 'I' followed by a space and the desired line number.
-To delete a line, type 'D' followed by a space and the line number.
-To print all the lines, type 'L' and press enter.
-To exit, type 'E' and press enter.
-To display this introduction, type 'H' and press enter.
------------------------------------------------------------
+1 line one
+2 line two
+3 line three
+4 line four
+5 line five
+6 line six
+7 line seven
+8 line eight
+9 line nine
+10 line ten
+11 line eleven

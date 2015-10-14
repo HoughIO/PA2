@@ -158,10 +158,6 @@ void Editor::delLine(int linenumber){
 
 }
 
-void Editor::menuList(){
-
-}
-
 void Editor::quitSave(){
 
 }
@@ -176,6 +172,7 @@ int main(int argc, char *argv[]){
 
 	if(argc != 2){
 		cout << "usage: " << argv[0] <<" <filename>\n" <<endl;
+		return 0;
 	}
 	else{
 		// We assume argv[1] is a filename to open
@@ -198,7 +195,7 @@ int main(int argc, char *argv[]){
 	cout << "	To insert text at the end of the file, type a line and press enter." << endl;
 	cout << "	To insert text at a certain line number, type \'I\'" << endl;
 	cout << "	followed by a space and the desired line number." << endl;
-	cout << "	To delete a line, type \'D\' followed by a space and the line number." endl;
+	cout << "	To delete a line, type \'D\' followed by a space and the line number." << endl;
 	cout << "	To print all the lines, type \'L\' and press enter." <<endl;
 	cout << "	To exit, type \'E\' and press enter." << endl;
 	cout << "	To display this introduction, type \'H\' and press enter." << endl;
@@ -220,22 +217,25 @@ int main(int argc, char *argv[]){
 		}
 		else if (userinput == 'L' || userinput == 'l'){
 			//print all lines
-			filelist.displayList(filelist.head);		
+			filelist.displayList(filelist.tail);		
 		}
 		else if (userinput == 'H' || userinput == 'h'){
 			//display menu again
-			cout << "-----------------------------------------------------------";
-			cout << "	Welcome to my text editor.";
-			cout << "	To insert text at the end of the file, type a line and press enter.";
-			cout << "	To insert text at a certain line number, type \'I\'";
-			cout << "	followed by a space and the desired line number.";
-			cout << "	To delete a line, type \'D\' followed by a space and the line number.";
-			cout << "	To print all the lines, type \'L\' and press enter.";
-			cout << "	To exit, type \'E\' and press enter.";
-			cout << "	To display this introduction, type \'H\' and press enter.";
-			cout << "-----------------------------------------------------------";
+			cout << "-----------------------------------------------------------" << endl;
+			cout << "	Welcome to my text editor." << endl;
+			cout << "	To insert text at the end of the file, type a line and press enter." << endl;
+			cout << "	To insert text at a certain line number, type \'I\'" << endl;
+			cout << "	followed by a space and the desired line number." << endl;
+			cout << "	To delete a line, type \'D\' followed by a space and the line number." << endl;
+			cout << "	To print all the lines, type \'L\' and press enter." <<endl;
+			cout << "	To exit, type \'E\' and press enter." << endl;
+			cout << "	To display this introduction, type \'H\' and press enter." << endl;
+			cout << "-----------------------------------------------------------" << endl;
 		}
-		else{
+		else if (userinput == 'E' || userinput == 'e'){
+			break;
+		}
+		else {
 			cout << "Incorrect entry" << endl;
 			cout << "Please enter a new choice from the menu" << endl;
 		}

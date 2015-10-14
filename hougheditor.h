@@ -39,7 +39,6 @@ class Editor{
 
 		void insertText(int number);
 		void delLine(int linenumber);
-		void menuList();
 		void quitSave();
 };
 
