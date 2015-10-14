@@ -16,15 +16,6 @@ using namespace std;
 
 class Editor{
 	public:
-		void menuHelp();
-		bool checkFile();
-		void fileOpen(string);
-		void insertText(int);
-		void delLine(int);
-		void listLine();
-		void menuList();
-		void quitSave();
-
 		struct link {
 			int id;
 			string name;
@@ -45,6 +36,11 @@ class Editor{
 		void deleteList( struct Editor::link*);
 		void displayList( struct Editor::link*)const ;
 		void displayLink( struct Editor::link*) const;
+
+		void insertText(int number);
+		void delLine(int linenumber);
+		void menuList();
+		void quitSave();
 };
 
 #endif /* HOUGHEDITOR_H */
